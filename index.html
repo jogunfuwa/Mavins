@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link  rel="stylesheet" href="build.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    * {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: linear-gradient(rgba(51, 51, 51, 1), rgba(33, 33, 33, 0.9));
+	color: white;
+}
+
+#btn {
+	padding: 12px 24px;
+	border: 1px solid #e1b959;
+	filter: drop-shadow(0px 4px 8px rgba(14, 31, 53, 0.12));
+	border-radius: 4px;
+}
+
+#input {
+	border: 0.5px solid #dddddd;
+	border-radius: 4px;
+	align-items: center;
+	padding: 8px;
+	gap: 8px;
+	background-color: transparent;
+}
+
+#button {
+	padding: 12px 24px;
+	gap: 8px;
+
+	background: #e1b959;
+	border: 1px solid #e1b959;
+	/* Subtle */
+
+	box-shadow: 0px 4px 8px rgba(14, 31, 53, 0.12);
+	border-radius: 4px;
+}
+
+#artiste {
+	filter: drop-shadow(0px 4px 8px rgba(14, 31, 53, 0.12));
+	border-radius: 8px 16px 8px 8px;
+}
+
+#overlay {
+	background: #e1b959;
+	border-radius: 0px 16px 0px 0px;
+	padding: 8px;
+	gap: 8px;
+	width: 200px;
+}
+
+#video {
+	background: rgba(14, 31, 53, 0.25);
+	border: 4px solid #e1b959;
+	border-radius: 32px;
+}
+
+  </style>
+
+  <!-- font awesome icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+
+
+  <title>Mavins</title>
+</head>
+
+<body>
+  <!-- hero section with navbar -->
+  <!-- the container -->
+  <section class="flex flex-col pb-36 bg-hero-image bg-no-repeat bg-cover bg-center ">
+
+    <navbar>
+      <div class="flex items-center justify-between pt-2 mx-11">
+      <div>
+        <img src="/img/Mavin-Logo.png" alt="logo" />
+      </div>
+      
+      <div class="hidden md:flex flex-row space-x-4">
+        <a href="#" class="text-darkOrange text-p1 ">Home</a>
+        <a href="#" class="hover:text-darkOrange text-p1 transition duration-300">About Us</a>
+        <a href="#" class="hover:text-darkOrange text-p1 transition duration-300">Our Services</a>
+        <a href="#" class="hover:text-darkOrange text-p1 transition duration-300">Talents</a>
+        <a href="#" class="hover:text-darkOrange text-p1 transition duration-300">Contact Us</a>
+      </div>
+
+      <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                <div class="fa fa-bars"></div>
+            </button>
+            </div> 
+
+          </div> 
+
+       <div class="hidden mobile-menu">
+        <ul class="">
+          <li><a href="index"
+              class="block text-sm px-2 py-4 text-white hover:hover:text-lightOrange font-semibold">Home</a></li>
+          <li><a href="#about"
+              class="block text-sm px-2 py-4 hover:hover:text-lightOrange transition duration-300">About</a></li>
+              <li><a href="#services"
+                class="block text-sm px-2 py-4 hover:hover:text-lightOrange transition duration-300">Services</a></li>
+                <li><a href="#talents"
+                  class="block text-sm px-2 py-4 hover:hover:text-lightOrange transition duration-300 ">Talents</a></li>
+          <li><a href="#contact"
+              class="block text-sm px-2 py-4 hover:hover:text-lightOrange transition duration-300">Contact
+              Us</a></li>
+        </ul>
+      </div>
+    </navbar>
+
+
+    <!-- Top container -->
+    <section class="container flex flex-col mx-auto space-y-12 items-center justify-center py-20">
+      <!-- The hub  -->
+      <div class="text-center text-h1 font-merri font-bold text-darkOrange md:mx-44">
+        <h1>The Hub Where Music Happens</h1>
+      </div>
+
+      <!-- Hub text -->
+      <div class="flex mt-10 font-sans text-center text-p font-normal md:mx-80">
+        <p>
+          We are all about good music, enjoyment and a happy time. Explore our
+          world with us and unleash the creativity within.
+        </p>
+      </div>
+      <!-- learn more button -->
+      <div>
+        <button type="submit" class="font-medium font-sans text-p1 bg-darkOrange py-3 px-6 rounded-lg text-black">
+          Learn More
+        </button>
+      </div>
+      <!-- Achievements -->
+    </section>
+  </section>
+  <!-- main page -->
+
+  <main class="flex flex-col mt-8 space-y-8">
+    <!-- achievements -->
+    <div
+      class="flex flex-row -mt-32 items-center justify-center mx-auto gap-6 px-4 rounded-2xl text-black font-sans bg-lightOrange md:flex-row md:gap-28 md:py-12 md:px-16 ">
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-bold text-h2">11+</h2>
+        <p class="font-normal text-p2">Artist</p>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-bold text-h2">2k+</h2>
+        <p class="font-normal text-p2">Singles</p>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-bold text-h2">16+</h2>
+        <p class="font-normal text-p2">Albums</p>
+      </div>
+      <div class="flex flex-col space-y-2">
+        <h2 class="font-bold text-h2">100+</h2>
+        <p class="font-normal text-p2">Awards</p>
+      </div>
+    </div>
+    <!-- What's Trending -->
+    <div class="container flex flex-col mx-auto py-20 items-center justify-center gap-20">
+      <div class="items-center justify-center text-center">
+        <h1 class="font-bold text-h3">See What's Trending</h1>
+        <p class="font-normal text-p1 md:mx-60">
+          Nothing hits more than a wonderful collaboration and our artistes
+          show that they are up to the task and more...
+        </p>
+      </div>
+     
+      <div class="container aspect-w-16 aspect-h-9 md:w-[760px] md:h-[480px]">
+        <iframe id="video"  src="https://www.youtube.com/embed/v8SNlvR86xc"  frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+    </div>
+
+    <!-- About Mavins Record -->
+    <!-- container -->
+    <main class="container flex flex-col items-center px-6 mx-auto mt-20 space-y-10 gap-20">
+      <!-- about heading -->
+      <div class="flex flex-col mx-auto items-center justify-center gap-4">
+        <div class="font-bold font-merri text-[37px] md:text-h3">
+          <h1>About Mavins Record!</h1>
+        </div>
+        <div class="font-normal font-sans text-p1 text-center">
+          <p>Mavins Record is an African leading entertainment company...</p>
+        </div>
+      </div>
+      <!-- about us flex -->
+      <!-- first -->
+      <div class="container flex flex-col items-center px-6 mx-auto mt-10 space-y-0 gap-24 md:gap-32 md:flex-row">
+        <!-- left item -->
+        <div class="flex flex-col space-y-3">
+          <h1 class="max-w-md text-t1 underline text-center font-bold font-merri text-darkOrange md:text-left">
+            Who Exactly Are We?
+          </h1>
+          <p class="text-p1 font-semibold font-sans  text-center md:max-w-xl md:text-left">
+            Mavin Records is the brain child of African renowned producer &
+            entrepreneur, the Don Jazzy. Created as a wholly independent music
+            label on the 8th of May, 2012; Mavin Records, immediately captured
+            the world’s attention. Mavin is home to Africa’s most exciting
+            musical talents with dozens of awards, hit singles, brand
+            endorsement and other numerous achievements...
+          </p>
+        </div>
+        <!-- music icon -->
+        <div class="max-w-md">
+          <img src="/img/MusicNotes.png" alt="" />
+        </div>
+
+        <!-- image -->
+        <div>
+          <img src="/img/mavins-1.png" alt="mavins catalogue" />
+        </div>
+      </div>
+
+      <!-- second -->
+      <div
+        class="container flex flex-col items-center just px-6 mx-auto mt-10 space-y-0 gap-24 md:gap-32 md:flex-row-reverse">
+        <!-- left item -->
+        <div class="flex flex-col space-y-3">
+          <h1 class="max-w-md text-t1 underline text-center font-bold font-merri text-darkOrange md:text-left">
+            Meet The Don Himself!
+          </h1>
+          <p class="text-p1 font-semibold font-sans  text-center md:max-w-xl md:text-left">
+            From his beginnings as a serial hit-making producer to his
+            transition into a music mogul with global dreams, Don’s journey
+            has come to define the expansion of African Music in the last
+            decade. Born Michael Collins Ajereh, better known as Don Jazzy,
+            the singer, producer, song writer, and entrepreneur, is an
+            Afro-beats Institution...
+          </p>
+        </div>
+        <!-- music icon -->
+        <div class="max-w-md">
+          <img src="/img/Vector.png" alt="" />
+        </div>
+
+        <!-- image -->
+        <div>
+          <img src="/img/don.png" alt="don-jazzy" />
+        </div>
+      </div>
+
+      <!-- third -->
+      <div class="container flex flex-col items-center px-6 mx-auto mt-10 space-y-0 gap-24 md:gap-32 md:flex-row">
+        <!-- left item -->
+        <div class="flex flex-col space-y-3">
+          <h1 class="max-w-md text-t1 underline text-center font-bold font-merri text-darkOrange md:text-left">
+            Music To The World
+          </h1>
+          <p class="text-p1 font-semibold font-sans  text-center md:max-w-xl md:text-left">
+            Mavin has a taste for delivering the utmost value, and this has
+            inspired the company’s expansion into innovative services such as
+            partnerships, content production, publishing and marketing.
+          </p>
+          <p class="text-p1 font-semibold font-sans text-center md:max-w-xl md:text-left">
+            Mavin Records was nominated for Best Record Label of the Year at the
+            2013 City People Entertainment Awards. The label won the
+            aforementioned category at the 2014 City People Entertainment
+            Awards...</p>
+        </div>
+        <!-- music icon -->
+        <div class="max-w-md">
+          <img src="/img/MusicNotes.png" alt="" />
+        </div>
+
+        <!-- image -->
+        <div>
+          <img src="/img/rema.png" alt="rema" />
+        </div>
+      </div>
+    </main>
+
+    <!-- what we have to offer -->
+    <section class="container flex flex-col items-center px-6 mx-auto pt-20 space-y-10 gap-20">
+      <!-- text heading -->
+      <div class="container text-center">
+        <h1 class="font-merri font-bold text-h3">What We Have To Offer!</h1>
+      </div>
+
+      <!-- flex container -->
+      <div class="container flex flex-col items-start  order-4 z-40 gap-20 md:px-48">
+        <!-- top flex -->
+        <div class="flex flex-col items-start text-center order-1 gap-44 md:flex-row">
+          <!-- left item -->
+          <div class="flex flex-col items-center justify-center gap-6">
+            <img src="/img/ladipoe.png" alt="" />
+            <h1 class="font-merri font-bold text-p2">
+              Brand Partnership & Activation
+            </h1>
+            <p class="mx-auto font-sans font-normal text-t2">
+              Collaborate with us Mavin to develop tailor-made solutions for
+              your brand and market campaign...
+            </p>
+            <button id="btn" class="font-medium font-sans text-p1 text-darkOrange">
+              Collaborate with Us
+            </button>
+          </div>
+          <!-- right item -->
+          <div class="flex flex-col items-center justify-center gap-6">
+            <img src="/img/johnny.png" alt="drill" />
+            <h1 class="font-merri font-bold text-p">
+              Music Sync & Listening
+            </h1>
+            <p class="mx-auto font-sans font-normal text-t2">
+              You can leverage our new and existing catalogs for use in Games,
+              TV Shows, Musics or Video games...
+            </p>
+            <button id="btn" class="font-medium font-sans text-p1 text-darkOrange">
+              Use Our Music
+            </button>
+          </div>
+        </div>
+        <!-- bottom flex -->
+        <div class="flex flex-col items-start text-center order-1 gap-44 md:flex-row">
+          <!-- left item -->
+          <div class="flex flex-col items-center justify-center gap-6">
+            <img src="/img/rem.png" alt="rema" />
+            <h1 class="font-merri font-bold text-p">
+              Performance & Appearances
+            </h1>
+            <p class="mx-auto font-sans font-normal text-t2">
+              We can create and manage bespoke events for you or your brands with some of our partners....
+            </p>
+            <button id="btn" class="font-medium font-sans text-p1 text-darkOrange">
+              Book Events Now
+            </button>
+          </div>
+          <!-- right item -->
+          <div class="flex flex-col items-center justify-center gap-6">
+            <img src="/img/studio.png" alt="studio" />
+            <h1 class="font-merri font-bold text-p">
+              Content & Brand Creation
+            </h1>
+            <p class="mx-auto font-sans font-normal text-t2">
+              Our unique creative team can create custom made content suitable for you or your brands...
+            </p>
+            <button id="btn" class="font-medium font-sans text-p1 text-darkOrange">
+              Send Us A Message
+            </button>
+          </div>
+        </div>
+    </section>
+
+    <!-- meet our artiste -->
+    <section class="container flex flex-col items-center pt-20 gap-20">
+      <!-- text heading -->
+      <div class="flex flex-col items-center text-center gap-4">
+        <h1 class="font-merri font-bold text-h3">Meet Our Artistes!</h1>
+        <p class="font-sans font-medium text-p1">We are showcasing our musical talents to the world... </p>
+      </div>
+
+
+      <!-- artiste section -->
+      <div class="container  flex flex-col items-center justify-center gap-20 order-1">
+        <!-- artiste container -->
+        <div class="flex flex-col items-center justify-between px-6 gap-6 order-0 md:flex-row">
+          <!-- individual artiste -->
+          <!-- rema -->
+          <div id="artiste" class="relative text-center ">
+            <img src="/img/remmy.png" alt="rema">
+            <div id="overlay" class="absolute top-1 right-2 text-center text-black "> Rema</div>
+
+          </div>
+
+          <!-- ayra -->
+          <div id="artiste" class="relative text-center ">
+            <img src="/img/ayra.png" alt="ayra">
+            <div id="overlay" class="absolute top-1 right-2  text-center text-black">Ayra Star
+            </div>
+          </div>
+          <!-- johnny -->
+          <div id="artiste" class="relative text-center ">
+            <img src="/img/john.png" alt="johnny">
+            <div id="overlay" class="absolute top-1 right-2  text-center text-black"> Johnny Drille
+            </div>
+          </div>
+
+          <!-- individual artiste ends -->
+        </div>
+
+        <!-- music note -->
+        <div>
+          <img src="/img/MusicNotes.png" alt="music">
+        </div>
+
+      </div>
+
+      <!-- artiste section ends here -->
+
+    </section>
+
+    <!-- don't be an outsider container-->
+    <section class="container  flex flex-col mx-auto items-center justify-center gap-20 py-10">
+
+      <!-- text heading -->
+      <div class="container flex flex-col items-center text-center gap-7">
+        <h1 class="font-merri font-bold text-h3">Don’t be an outsider! Join the hub.</h1>
+        <p class="font-sans font-medium text-p1 md:mx-40">We always have something awesome to tell you. Would you like to learn
+          about our tours and events, new releases, career opportunities, and a lot of other juicy news? </p>
+        <p class="font-sans font-medium text-p1"> Be a part of our conversation just by entering your details below.</p>
+
+        <!-- subscribe form -->
+        <div class="flex flex-col mx-auto gap-4 pb-12 md:flex-row md:items-center md:justify-between  md:w-[1012px]">
+          <input id="input" type="text" placeholder="Enter First Name" class="items-start w-full md:w-[240px]">
+          <input id="input" type="text" placeholder="Enter Email Address" class="w-full md:w-[500px]">
+          <button id="button" type="submit" class="w-full md:w-[240px]">Subscribe</button>
+
+
+        </div>
+      
+
+      </div>
+
+
+    </section>
+    <!-- end of main -->
+  </main>
+  <!-- footer -->
+  <footer class="flex flex-col  space-x-4 justify-between items-center bg-darkOrange text-black md:px-5 md:flex-row">
+    <h1 class="font-inter font-medium text-t2">@ Mavis Record Label. All rights reserved. 2022</h1>
+
+    <!-- links section -->
+    <div class="space-x-3">
+      <a href="" class="fa fa-linkedin" target="_blank"></a>
+      <a href="" class="fa fa-instagram" target="_blank"></a>
+      <a href="" class="fa fa-twitter" target="_blank"></a>
+      <a href="" class="fa fa-facebook" target="_blank"></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
